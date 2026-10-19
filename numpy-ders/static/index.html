@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SE 422 Python</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="/static/stil.css">
+<script>
+  // Sayfa çizilmeden önce kayıtlı temayı uygula (yanıp sönmeyi önler)
+  try {
+    var t = (JSON.parse(localStorage.getItem("se422-ders-v1") || "{}").tema) || "sistem";
+    if (t !== "sistem") document.documentElement.dataset.theme = t === "koyu" ? "dark" : "light";
+  } catch (e) {}
+</script>
+</head>
+<body>
+<div class="uygulama">
+  <nav class="yan-menu" id="yan-menu"></nav>
+  <main class="orta">
+    <div class="mobil-ust" id="mobil-ust"></div>
+    <div id="sayfa"></div>
+  </main>
+  <aside class="sag-panel" id="sag-panel"></aside>
+</div>
+<nav class="alt-menu" id="alt-menu"></nav>
+
+<div id="ders-katman"></div>
+
+<aside class="terminal" id="terminal" aria-label="Python terminali">
+  <div class="terminal-ust">
+    <span><span class="nokta"></span>Python + NumPy terminali</span>
+    <div>
+      <button id="terminal-temizle">Temizle</button>
+      <button id="terminal-sifirla">Sıfırla</button>
+      <button id="terminal-kapat" aria-label="Kapat">✕</button>
+    </div>
+  </div>
+  <div class="terminal-ekran" id="terminal-ekran"><div class="t-bilgi">Python terminali · NumPy hazır (np olarak yüklü). Değişkenler komutlar arasında korunur.
+Enter: çalıştır · ↑/↓: önceki komutlar · ":" ile biten satır blok başlatır, boş satır bitirir.</div></div>
+  <div class="terminal-girdi">
+    <span id="terminal-istem">&gt;&gt;&gt;</span>
+    <input id="terminal-input" autocomplete="off" spellcheck="false" autocapitalize="off" placeholder="np.arange(5)">
+  </div>
+</aside>
+
+<script src="/static/mufredat/00-ortak.js"></script>
+<script src="/static/mufredat/01-temeller.js"></script>
+<script src="/static/mufredat/02-kontrol.js"></script>
+<script src="/static/mufredat/03-fonksiyonlar.js"></script>
+<script src="/static/mufredat/04-dosyalar.js"></script>
+<script src="/static/mufredat/05-listeler.js"></script>
+<script src="/static/mufredat/06-stringler.js"></script>
+<script src="/static/mufredat/07-sozlukler.js"></script>
+<script src="/static/mufredat/08-siniflar.js"></script>
+<script src="/static/mufredat/09-kalitim.js"></script>
+<script src="/static/mufredat/10-ozyineleme.js"></script>
+<script src="/static/mufredat/11-veritabani.js"></script>
+<script src="/static/mufredat/12-ortamlar.js"></script>
+<script src="/static/mufredat/13-numpy1.js"></script>
+<script src="/static/mufredat/14-numpy2.js"></script>
+<script src="/static/uygulama.js"></script>
+</body>
+</html>
